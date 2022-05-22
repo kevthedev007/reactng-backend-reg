@@ -30,6 +30,7 @@ const register = async (req, res, next) => {
       email,
       phone,
       course,
+      accountNumber: account._id
     })
     return res.status(201).json({
       success: true,

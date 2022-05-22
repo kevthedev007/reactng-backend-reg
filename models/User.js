@@ -14,6 +14,7 @@ const UserSchema = new mongoose.Schema({
     required: true
   },
   course: { type: String },
+  accountNumber: { type: mongoose.Types.ObjectId, ref: "Account" }
 }, { timestamps: true }
 );
 
