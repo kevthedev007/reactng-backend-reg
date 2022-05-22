@@ -2,10 +2,6 @@ const { AccountService, UserService } = require("../services")
 const { sendConfirmationMail } = require("../utils/sendmail")
 const createError = require('http-errors');
 
-const registerView = async (req, res, next) => {
-  res.render("index", {})
-}
-
 const register = async (req, res, next) => {
   try {
     const { firstname, lastname, email, phone, course, accountNumber } = req.body;
@@ -46,6 +42,5 @@ const register = async (req, res, next) => {
 }
 
 module.exports = {
-  registerView,
   register
 }
