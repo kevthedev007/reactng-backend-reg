@@ -7,7 +7,7 @@ const User = require("../models/User");
  */
 const createUser = async (payload) => {
   const user = await User.create(payload);
-  return user;
+  return user.populate("accountNumber");
 };
 
 /**
