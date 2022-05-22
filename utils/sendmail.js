@@ -17,21 +17,6 @@ const readHTMLFile = function (path, callback) {
   });
 };
 
-
-// let transporter = nodemailer.createTransport(
-//   smtp({
-//     host: 'in-v3.mailjet.com',
-//     port: 587,
-//     auth: {
-//       user: process.env.MAILJET_USER,
-//       pass: process.env.MAILJET_PASS
-//     },
-//     tls: {
-//       rejectUnauthorized: false
-//     }
-//   })
-// )
-
 let transporter = nodemailer.createTransport({
   service: "gmail",
   port: 465,
