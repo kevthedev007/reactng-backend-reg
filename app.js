@@ -36,7 +36,7 @@ app.use(bodyParser.json({ limit: '50mb' }))
 
 //routes
 app.get('/', (req, res) => {
-  res.status(200).json({ message: 'Welcome to backreg-auth' })
+  res.render("index", {})
 })
 app.use('/user', user)
 
